@@ -1,16 +1,4 @@
 import { createStore } from 'vuex'
-import { socialData } from '@/data/social.data'
-import { navigationData } from '@/data/navigation.data'
-import { checklistsData } from '@/data/checklists.data'
+import { initialState as state } from '@/store/state'
 
-export default createStore({
-  state: {
-    social: socialData,
-    navigation: navigationData,
-    checklists: checklistsData
-  },
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {}
-})
+export default createStore({ state })
