@@ -1,7 +1,7 @@
 <template>
-  <div class="checklists-page">
+  <div class="page">
     <records-list :data="data"/>
-    <div class="checklist-page__content">
+    <div class="content">
       <router-view/>
     </div>
   </div>

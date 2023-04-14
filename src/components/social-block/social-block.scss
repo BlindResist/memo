@@ -1,0 +1,25 @@
+.social-block {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+
+  &__item {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: color .3s ease-in-out;
+
+    & + & {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
