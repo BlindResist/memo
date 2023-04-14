@@ -11,7 +11,7 @@
   z-index: 100;
   pointer-events: none;
   background-color: $white;
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid rgba($black, 0.25);
   box-sizing: border-box;
 
   @include breakpoint(v-mobile) {

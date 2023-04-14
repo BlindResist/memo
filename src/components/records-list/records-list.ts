@@ -14,14 +14,19 @@ export default defineComponent({
   },
   emits: ['item:click'],
   setup () {
-    const { dispatch } = useStore()
+    const { state, dispatch } = useStore()
+
+    const activeRecordClass = (id: number) => ({
+      'records-list__item--active': state.checklists.selectedChecklist === id
+    })
 
     const itemClick = (id: number): void => {
       dispatch(ActionTypes.CHECKLIST_SELECT, id)
     }
 
     return {
-      itemClick
+      itemClick,
+      activeRecordClass
     }
   }
 })

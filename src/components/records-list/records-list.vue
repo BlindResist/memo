@@ -5,6 +5,7 @@
         v-for="item in data"
         :key="item.id"
         class="records-list__item"
+        :class="activeRecordClass(item.id)"
       >
         <span
           class="records-list__item-text"

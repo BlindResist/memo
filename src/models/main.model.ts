@@ -13,3 +13,7 @@ export interface IRecordsListItem {
   name: string,
   id: number
 }
+
+export interface IElementClass {
+  [key: string]: string
+}
