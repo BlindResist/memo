@@ -1,4 +1,8 @@
-import { defineComponent } from 'vue'
+import {
+  defineComponent
+} from 'vue'
+import { useStore } from 'vuex'
+import { ActionTypes } from '@/store/types'
 
 export default defineComponent({
   name: 'records-list',
@@ -6,6 +10,18 @@ export default defineComponent({
     data: {
       type: Array,
       default: () => []
+    }
+  },
+  emits: ['item:click'],
+  setup () {
+    const { dispatch } = useStore()
+
+    const itemClick = (id: number): void => {
+      dispatch(ActionTypes.CHECKLIST_SELECT, id)
+    }
+
+    return {
+      itemClick
     }
   }
 })

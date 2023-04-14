@@ -1,1 +1,41 @@
-.records-list {}
+.records-list {
+  min-width: 400px;
+  width: 30%;
+  height: 100%;
+  position: relative;
+  border-right: 1px solid $black;
+
+  &__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $black;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+
+    &-text {
+      display: block;
+      flex-grow: 1;
+      padding: 16px;
+    }
+
+    &-button {
+      flex-shrink: 0;
+      padding: 16px;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: $lite-grey;
+      }
+    }
+  }
+
+  &__actions {
+    padding: 16px;
+    position: absolute;
+    left: 100%;
+    z-index: 10;
+    background-color: $lite-grey;
+  }
+}

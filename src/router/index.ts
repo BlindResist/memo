@@ -19,13 +19,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/checklists',
     name: 'checklists',
-    component: () => import('../views/checklists/root-page.vue'),
-    children: [
-      {
-        path: '',
-        component: () => import('../views/checklists/list-page.vue')
-      }
-    ]
+    component: () => import('../views/checklists-page.vue')
   }
 ]
 

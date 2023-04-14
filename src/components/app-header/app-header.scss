@@ -10,8 +10,8 @@
   left: 0;
   z-index: 100;
   pointer-events: none;
-  background-color: #ffffff;
-  border-bottom: 1px solid #212121;
+  background-color: $white;
+  border-bottom: 1px solid $black;
   box-sizing: border-box;
 
   @include breakpoint(v-mobile) {

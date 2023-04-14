@@ -5,7 +5,15 @@
         v-for="item in data"
         :key="item.id"
         class="records-list__item"
-      >{{ item.name }}</li>
+      >
+        <span
+          class="records-list__item-text"
+          @click="itemClick(item.id)"
+        >{{ item.name }}</span>
+        <div class="records-list__item-button">
+          <span>&bullet;&bullet;&bullet;</span>
+        </div>
+      </li>
     </ul>
   </div>
 </template>
