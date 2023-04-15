@@ -14,6 +14,11 @@ export interface IRecordsListItem {
   id: number
 }
 
-export interface IElementClass {
+export interface IElementClassObject {
   [key: string]: string
+}
+
+export interface IPageStructure<T> {
+  records: IRecordsListItem[],
+  content: T[],
 }

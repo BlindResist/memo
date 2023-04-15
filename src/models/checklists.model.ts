@@ -1,4 +1,6 @@
-import { IRecordsListItem } from '@/models/main.model'
+import {
+  IPageStructure,
+} from '@/models/main.model'
 
 export interface IChecklistsContentItem {
   id: number,
@@ -8,8 +10,6 @@ export interface IChecklistsContentItem {
   memo: string
 }
 
-export interface IChecklists {
+export interface IChecklists extends IPageStructure<IChecklistsContentItem> {
   selectedChecklist: number | null,
-  records: IRecordsListItem[],
-  content: IChecklistsContentItem[],
 }
