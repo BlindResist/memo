@@ -1,5 +1,30 @@
 .checklist-item {
-  padding: 16px;
   margin-bottom: 8px;
   border: 1px solid rgba($black, 0.25);
+
+  &__panel {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+  }
+
+  &__edit,
+  &__name {
+    padding: 16px;
+  }
+
+  &__button {
+    flex-shrink: 0;
+    padding: 16px;
+    @include transition(background-color);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lite-grey;
+    }
+  }
+
+  &__name {
+    flex-grow: 1;
+  }
 }

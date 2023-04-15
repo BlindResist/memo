@@ -11,9 +11,7 @@
           class="records-list__item-text"
           @click="itemClick(item.id)"
         >{{ item.name }}</span>
-        <div class="records-list__item-button">
-          <span>&bullet;&bullet;&bullet;</span>
-        </div>
+        <div class="records-list__item-button icon icon-menu"></div>
       </li>
     </ul>
   </div>
