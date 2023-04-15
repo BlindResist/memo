@@ -2,10 +2,16 @@
   <div class="page">
     <records-list :data="recordsList"/>
     <div class="content">
-      <checklist-item
-        v-for="item in checklistData"
-        :key="item.id"
-        :data="item"
+      <template v-if="!!checklistData.length">
+        <checklist-item
+          v-for="item in checklistData"
+          :key="item.id"
+          :data="item"
+        />
+      </template>
+      <app-placeholder
+        v-else
+        text="Выберите чеклист из списка слева"
       />
     </div>
   </div>
@@ -22,12 +28,14 @@ import { IRecordsListItem } from '@/models/main.model'
 import { IChecklistsContentItem } from '@/models/checklists.model'
 import RecordsList from '@/components/records-list/records-list.vue'
 import ChecklistItem from '@/components/checklist-item/checklist-item.vue'
+import AppPlaceholder from '@/components/app-placeholder/app-placeholder.vue'
 
 export default defineComponent({
   name: 'checklists-page',
   components: {
     RecordsList,
-    ChecklistItem
+    ChecklistItem,
+    AppPlaceholder
   },
   setup () {
     const { state, getters } = useStore()
