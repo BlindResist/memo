@@ -3,7 +3,6 @@
     <ul class="app-navigation__list">
       <li
         :key="item.id"
-        :data-index="app"
         class="app-navigation__item"
         v-for="item in data"
       >

@@ -15,7 +15,7 @@ export interface IRecordsListItem {
 }
 
 export interface IElementClassObject {
-  [key: string]: string
+  [key: string]: boolean
 }
 
 export interface IPageStructure<T> {

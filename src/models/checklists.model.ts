@@ -1,5 +1,5 @@
 import {
-  IPageStructure,
+  IPageStructure
 } from '@/models/main.model'
 
 export interface IChecklistsContentItem {

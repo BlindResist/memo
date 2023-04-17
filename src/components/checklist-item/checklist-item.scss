@@ -26,5 +26,17 @@
 
   &__name {
     flex-grow: 1;
+    border: none;
+    outline: 0 none;
+
+    &:disabled {
+      color: $black;
+      background-color: $white;
+    }
+  }
+
+  &.is-editing {
+    position: relative;
+    z-index: 11;
   }
 }
